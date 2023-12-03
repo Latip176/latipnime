@@ -1,3 +1,2 @@
 # latipnime
-Web for Streaming Anime
-Status: on-progress
+Nikmati pengalaman menonton anime subtitle Indonesia terbaru dan terbaik di LatipNime. Saksikan anime berkualitas HD, episode terbaru, dan koleksi lengkap. Gratis dan mudah diakses.
