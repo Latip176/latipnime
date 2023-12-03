@@ -1,7 +1,14 @@
 <?php
 
-include('src/RestAPI.php');
-use Request\Latip176\RestAPI;
+
+require_once 'autoload.php';
+
+use Latip176\Html;
+use Latip176\RestAPI;
+
+$HTML = new Html();
+$restApi = new RestAPI();
+$results = json_decode($restApi->request("home"));
 
 ?>
 <!DOCTYPE html>
@@ -10,73 +17,41 @@ use Request\Latip176\RestAPI;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/style.js"></script>
+    <title>LatipNime - Nonton Anime subtitle Indonesia!</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <script src="/assets/js/style.js"></script>
+    
+    <meta name="author" content="Latip176 (Latif Harkat)">
+    <meta name="keywords" content="streaming anime terbaik, anime subtitle Indonesia, download anime, anime HD, situs nonton anime gratis, anime ongoing, anime terpopuler">
+    <meta name="description" content="Nikmati pengalaman menonton anime subtitle Indonesia terbaru dan terbaik di LatipNime. Saksikan anime berkualitas HD, episode terbaru, dan koleksi lengkap. Gratis dan mudah diakses.">
+    
+    <meta property="og:title" content="LatipNime - Nonton Anime subtitle Indonesia gratis.">
+    <meta property="og:description" content="Nikmati pengalaman menonton anime subtitle Indonesia terbaru dan terbaik di LatipNime. Saksikan anime berkualitas HD, episode terbaru, dan koleksi lengkap. Gratis dan mudah diakses.">
+    <meta property="og:image" content="favicon.ico">
+    <meta property="og:url" content="https://anime.latipharkat.my.id/">
 </head>
 <body>
-    <div class="navbar">
-        <div class="nav">
-            <ul class="list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#"><i class="fas fa-sign-in-alt"></i> Ongoing</a></li>
-                <li><a href="#"><i class="fas fa-envelope"></i> Contact Me</a></li>
-                <li>
-                    <form action="search" method="get">
-                        <input type="text" name="keyword" class="keyword" placeholder="cari anime favorite kamu"> <button type="submit">Search</button>
-                    </form>
-                </li>
-            </ul>
-            <ul class="open">
-                <li>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </li>
-            </ul>
-            <ul class="close">
-                <li>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </li>
-            </ul>
-            <span class="nav-brand" style="font-size: 20px;">Latip176</span>
-        </div>
-    </div>
-    <div class="navbar-content">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#"><i class="fas fa-sign-in-alt"></i> Ongoing</a></li>
-            <li><a href="#"><i class="fas fa-envelope"></i> Contact Me</a></li>
-            <li>
-                <form action="search" method="get">
-                    <input type="text" name="keyword" class="keyword" placeholder="cari anime favorite kamu"> <button type="submit">Search</button>
-                </form>
-            </li>
-        </ul>
-    </div>
+    <?= $HTML::navbar() ?>
 
     <div class="content">
-        <h1>Nonton Anime - Bahasa Indonesia</h1>
-        <p style="padding-top: 10px;">
-            Nonton Anime tanpa Iklan hanya ada di sini! Website ini dibuat oleh Latip176 (Latif Harkat). Semua Data hasil Scraping dari otakudesu.cam.
+        <h2>Streaming Anime - Subtitle Indonesia</h2>
+        <p style="padding-top: 10px; color: #ddd">
+            Nonton Anime tanpa Iklan hanya ada di sini! Website ini dibuat oleh Latip176 (Latif Harkat) dengan Python framework Flask dan Php Native. Semua Data hasil Scraping dari otakudesu secara Live. Klik Judul Anime untuk Stream!
         </p>
         <div class="container">
-            <?php
-            $restApi = new RestAPI();
-            $results = json_decode($restApi->request("home"));
-            var_dump($results);
-            foreach($results as $data) {
-            ?>
+            <?php foreach($results->data as $data): ?>
                 <div class="card">
-                    <img src="<?= $data['data']['cover'] ?>" alt="">
-                    <p class="episode"><?= $data['data']['episode'] ?></p>
-                    <p class="release"><?= $data['data']['release'] ?></p>
-                    <a href="/baca/?data=<?= $data['data']['data'] ?>"class="judul"><?= $data['data']['judul'] ?></a>
+                    <p class="cover"><img src="<?= $data->cover ?>" alt="Anime Cover"></p>
+                    <p class="episode" align="center"><?= $data->episode ?></p>
+                    <p class="release" align="center"><?= $data->release ?></p>
+                    <a href="/anime/?data=<?= $data->data ?>"class="judul"><?= $data->judul ?></a>
                 </div>
-            <?php } ?>
+            <?php endforeach ?>
         </div>
     </div>
+    
+    <?= $HTML::footer() ?>
 </body>
 </html>
