@@ -1,1 +1,63 @@
+.container {
+    padding-top: 30px;
+    width: 80%;
+    margin: auto;
+}
+.container .anime {
+    display: grid;
+    gap: 10px;
+}
+.anime .cover {
+    text-align: center;
+}
+.anime img {
+    width: 200px;
+    height: 300px;
+    border-radius: 15px;
+}
+.anime .judul {
+    padding: 5px;
+}
+.anime .info {
+    width: 330px;
+    margin: auto;
+    padding-top: 10px;
+}
+.anime .info > span {
+    display: block;
+}
 
+@media screen and (min-width: 768px) {
+    .container .anime {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.list-episode {
+    width: 80%;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 40px;
+}
+.list-episode hr {
+    width: 200px;
+    background: #ddd;
+    margin: 7px auto;
+    padding: 1px;
+    border-radius: 100pxc;
+}
+.list-episode a:visited {
+    color: #ddd;
+}
+.list-episode .list {
+    padding: 10px;
+}
+.list .judul_episode {
+    color: lightblue;
+    text-decoration: underline;
+}
+.list .release {
+    color: #dddd;
+}
