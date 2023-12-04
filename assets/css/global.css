@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    font-family: sans-serif;
+    background: black;
+    color: white !important;
+}
+
+/* navbar */
+.navbar {
+    width: 100%;
+    height: 60px;
+}
+.nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* list content */
+.list > li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 10px;
+}
+.list a, .navbar-content a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.list a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* navbar content */
+.navbar-content {
+    width: 100%;
+    text-align: center;
+    visibility: hidden;
+    position: relative;
+}
+
+.navbar-content ul {
+    height: 0px;
+    border-bottom: 2px solid white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: 0.3s ease;
+}
+.navbar-content ul > li a:hover {
+    color: white;
+}
+.navbar-content > ul > li {
+    padding: 20px;
+    position: relative;
+    visibility: hidden;
+}
+.navbar-content li:hover {
+    transition: background 1s;
+    border-radius: 30px;
+    background-color: #ddd;
+}
+
+/* open button */
+.open, .close {
+    margin-left: 15px;
+}
+.open > li div, .close > li div {
+    margin-bottom: 5px;
+}
+.open li, .close li, .navbar-content li {
+    list-style: none;
+}
+
+/* close button */
+.close {
+    position: absolute;
+    visibility: hidden;
+}
+
+/* navbar brand */
+.nav-brand {
+    position: absolute;
+    font-weight: bold;
+    right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .list > li {
+        position: fixed;
+        visibility: hidden;
+    }
+
+    /* open button */
+    .open > li > div:nth-child(1) {
+        width: 20px;
+        height: 2px;
+        background: white;
+    }
+    .open > li > div:nth-child(2) {
+        width: 20px;
+        height: 2px;
+        background: white;
+    }
+    .open > li > div:nth-child(3) {
+        width: 20px;
+        height: 2px;
+        background: white;
+    }
+
+    /* close button */
+    .close > li > div:nth-child(1) {
+        width: 25px;
+        height: 2px;
+        background: red;
+        transform: rotate(45deg);
+    }
+    .close > li > div:nth-child(2) {
+        width: 25px;
+        height: 2px;
+        background: red;
+        transform: rotate(-45deg);
+    }
+}
+
+@media screen and (min-width:  768px) {
+    .navbar-content {
+        visibility: hidden !important;
+    }
+    #myCanvas {
+      width: 800px;
+    }
+}
+
+.keyword {
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 5px;
+    background: none;
+    color: blue;
+}
+button[type="submit"] {
+    height: 30px;
+    width: 60px;
+    border-radius: 10px;
+    background: blue;
+    color: white;
+    border: 1px solid white;
+}
+
+
+.footer {
+    width: 100%;
+}
+.footer .latip {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}

@@ -1,152 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    font-family: sans-serif;
-}
-
-/* navbar */
-.navbar {
-    width: 100%;
-    height: 50px;
-}
-.nav {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-/* list content */
-.list > li {
-    list-style: none;
-    display: inline-block;
-    padding-left: 10px;
-}
-.list a, .navbar-content a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-.list a:hover {
-    border-bottom: 2px solid black;
-}
-
-/* navbar content */
-.navbar-content {
-    width: 100%;
-    text-align: center;
-    visibility: hidden;
-    position: relative;
-}
-
-.navbar-content ul {
-    height: 0px;
-    border-bottom: 2px solid black;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    transition: 0.3s ease
-}
-.navbar-content ul > li a:hover {
-    color: white;
-}
-.navbar-content > ul > li {
-    padding: 20px;
-    position: relative;
-}
-.navbar-content li:hover {
-    transition: background 1s;
-    border-radius: 30px;
-    background-color: rgba(0, 0, 0, 0.63);
-}
-
-/* open button */
-.open, .close {
-    margin-left: 10px;
-}
-.open > li div, .close > li div {
-    margin-bottom: 5px;
-}
-.open li, .close li, .navbar-content li {
-    list-style: none;
-}
-
-/* close button */
-.close {
-    position: absolute;
-    visibility: hidden;
-}
-
-/* navbar brand */
-.nav-brand {
-    position: absolute;
-    font-weight: bold;
-    right: 10px;
-}
-
-@media screen and (max-width: 768px) {
-    .list > li {
-        position: fixed;
-        visibility: hidden;
-    }
-
-    /* open button */
-    .open > li > div:nth-child(1) {
-        width: 20px;
-        height: 2px;
-        background: black;
-    }
-    .open > li > div:nth-child(2) {
-        width: 20px;
-        height: 2px;
-        background: black;
-    }
-    .open > li > div:nth-child(3) {
-        width: 20px;
-        height: 2px;
-        background: black;
-    }
-
-    /* close button */
-    .close > li > div:nth-child(1) {
-        width: 25px;
-        height: 2px;
-        background: red;
-        transform: rotate(45deg);
-    }
-    .close > li > div:nth-child(2) {
-        width: 25px;
-        height: 2px;
-        background: red;
-        transform: rotate(-45deg);
-    }
-}
-
-@media screen and (min-width:  768px) {
-    .navbar-content {
-        visibility: hidden !important;
-    }
-    #myCanvas {
-      width: 800px;
-    }
-}
-
-.keyword {
-    height: 25px;
-    border-radius: 5px;
-}
-button[type="submit"] {
-    height: 30px;
-    width: 60px;
-    border-radius: 10px;
-    background: blue;
-    color: white;
-    border: 1px solid black;
-}
-
 .content {
     width: 90%;
     margin: 50px auto;
@@ -156,10 +7,47 @@ button[type="submit"] {
     display: grid;
     gap: 10px;
 }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .card {
-    width: 100px;
-    height: 300px;
-    border: 1px solid black;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.cover img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    height: 200px;
+}
+
+.episode,
+.release {
+    margin: 10px 0;
+    font-weight: bold;
+}
+.release {
+    color: #ddd;
+}
+
+.judul {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
 }
 @media screen and (max-width: 768px) {
     .content .container {
