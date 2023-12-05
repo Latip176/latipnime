@@ -41,6 +41,13 @@ class RestAPI extends Data {
             case "search":
                 $this->action = "/search/?keyword={$this->data}";
                 break;
+            case "ongoing":
+                if($this->data != null) {
+                    $this->action = "/ongoing/?next=page-{$this->data}";
+                } else {
+                    $this->action = "/ongoing/";
+                }
+                break;
         }
         return $this->getData($this->action);
     }

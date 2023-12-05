@@ -8,8 +8,8 @@ class Html {
             <div class="navbar">
                 <div class="nav">
                     <ul class="list">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="#">Ongoing</a></li>
+                        <li><a href="/index.php">Home</a></li>
+                        <li><a href="/ongoing">Ongoing</a></li>
                         <li><a href="https://wa.me/6283870396203">Contact Me</a></li>
                         <li>
                             <form action="/search" method="get">
@@ -36,8 +36,8 @@ class Html {
             </div>
             <div class="navbar-content">
                 <ul>
-                    <li id="item"><a href="index.php">Home</a></li>
-                    <li id="item"><a href="#">Ongoing</a></li>
+                    <li id="item"><a href="/index.php">Home</a></li>
+                    <li id="item"><a href="/ongoing">Ongoing</a></li>
                     <li id="item"><a href="https://wa.me/6283870396203">Contact Me</a></li>
                     <li id="item">
                         <form action="/search" method="get">
