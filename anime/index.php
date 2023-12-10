@@ -21,6 +21,7 @@ $data = $data->data;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anime - <?= $data->judul ?></title>
+    <link rel="icon" href="<?= $data->cover ?>">
     <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="../assets/js/style.js"></script>
@@ -31,14 +32,16 @@ $data = $data->data;
         <div class="anime">
             <div class="cover">
                 <img src="<?= $data->cover ?>" alt="<?= $data->judul ?>">
-                <h2 class="judul" align="center"><?= $data->judul ?></h2>
             </div>
             <div class="info">
+                <div class="infoo">
+                    <h2 class="judul" align="center"><?= $data->judul ?></h2>
+                </div>
                 <span class="studio">🎗️ Studio: <?= $data->studio ?></span>
                 <span class="genre">💫 Genre: <?= $data->genre ?></span>
                 <span class="durasi">⏰ Durasi: <?= $data->durasi ?> / episode </span>
                 <span class="tipe">🌻 Tipe: <?= $data->tipe ?></span>
-                <span class="skore">😁 Score: <?= $data->skor ?> ⭐</span>
+                <span class="skore">😁 Score: <?= $data->skor ?> / 10 ⭐</span>
                 <span class="status">🤔 Status: <?= $data->status ?></span>
                 <span class="rilis">🗓️ Tanggal Rilis: <?= $data->tanggal_rilis ?> </span>
                 <span class="totalepsd">🤓 Total Episode: <?= $data->total_episode ?> </span>
