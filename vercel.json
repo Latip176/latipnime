@@ -5,6 +5,8 @@
         }
     },
     "routes": [
-        { "src": "/",  "dest": "/api/index.php" }
+        { "src": "/",  "dest": "/api/index.php" },
+        { "src": "/anime/", "dest": "/anime/index.php" },
+        { "src": "/anime/view", "dest": "/anime/view/index.php" }
       ]
 }
