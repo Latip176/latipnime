@@ -6,6 +6,6 @@
     },
     "routes": [
         { "src": "/",  "dest": "/api/index.php" },
-        { "src": "/anime/(.*)", "dest": "/anime/?data=$1" }
+        { "src": "/anime/(.*)", "dest": "/anime/index.php" }
       ]
 }
