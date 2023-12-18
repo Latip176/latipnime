@@ -1,6 +1,6 @@
 <?php
 
-require_once '../autoload.php';
+require_once 'autoload.php';
 
 use Latip176\Html;
 use Latip176\RestAPI;
