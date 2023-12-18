@@ -8,6 +8,7 @@
         { "src": "/",  "dest": "/api/index.php" },
         { "src": "/anime/*", "dest": "/api/anime.php" },
         { "src": "/anime/view/*",  "dest": "/api/view.php" },
-        { "src": "/ongoing/*", "dest": "/api/ongoing.php" }
+        { "src": "/ongoing/*", "dest": "/api/ongoing.php" },
+        { "src": "/search/*", "dest": "/api/search.php" }
       ]
 }
