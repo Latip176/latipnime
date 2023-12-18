@@ -8,7 +8,7 @@ class Html {
             <div class="navbar">
                 <div class="nav">
                     <ul class="list">
-                        <li><a href="/index.php">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="/ongoing">Ongoing</a></li>
                         <li><a href="https://wa.me/6283870396203">Contact Me</a></li>
                         <li>
