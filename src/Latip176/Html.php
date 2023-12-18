@@ -36,7 +36,7 @@ class Html {
             </div>
             <div class="navbar-content">
                 <ul>
-                    <li id="item"><a href="/index.php">Home</a></li>
+                    <li id="item"><a href="/">Home</a></li>
                     <li id="item"><a href="/ongoing">Ongoing</a></li>
                     <li id="item"><a href="https://wa.me/6283870396203">Contact Me</a></li>
                     <li id="item">
