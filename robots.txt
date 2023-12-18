@@ -4,4 +4,4 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
-Sitemap: https://anime.latipharkat.my.id/sitemap.xml
+Sitemap: https://latipnime.biz.id/sitemap.xml
