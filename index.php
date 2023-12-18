@@ -24,6 +24,8 @@ $results = json_decode($restApi->request("home"));
     <script src="/assets/js/style.js"></script>
 
     <meta name="google-site-verification" content="QNS0JqpZlDO_0k8uJfnyvecP5Ra2TANX4rl2Kz51_C8" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2409663454221348"
+     crossorigin="anonymous"></script>
     
     <meta property="og:title" content="LatipNime - Nonton Anime subtitle Indonesia" />
     <meta property="og:description" content="Nikmati pengalaman menonton anime subtitle Indonesia terbaru dan terbaik di LatipNime. Saksikan anime berkualitas HD, episode terbaru, dan koleksi lengkap. Gratis dan mudah diakses." />
