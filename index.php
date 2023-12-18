@@ -27,8 +27,8 @@ $results = json_decode($restApi->request("home"));
     
     <meta property="og:title" content="LatipNime - Nonton Anime subtitle Indonesia" />
     <meta property="og:description" content="Nikmati pengalaman menonton anime subtitle Indonesia terbaru dan terbaik di LatipNime. Saksikan anime berkualitas HD, episode terbaru, dan koleksi lengkap. Gratis dan mudah diakses." />
-    <meta property="og:image" content="https://anime.latipharkat.my.id/favicon.ico" />
-    <meta property="og:url" content="https://anime.latipharkat.my.id/" />
+    <meta property="og:image" content="https://latipnime.biz.id/favicon.ico" />
+    <meta property="og:url" content="https://latipnime.biz.id/" />
     
     <meta name="author" content="Latip176 (Latif Harkat)">
     <meta name="keywords" content="streaming anime terbaik, anime subtitle Indonesia, download anime, anime HD, situs nonton anime gratis, anime ongoing, anime terpopuler">
