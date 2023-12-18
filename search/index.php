@@ -1,6 +1,6 @@
 <?php
 
-require_once '../autoload.php';
+require_once 'autoload.php';
 
 if(!isset($_GET['keyword'])) {
     header('Location: index.php');
